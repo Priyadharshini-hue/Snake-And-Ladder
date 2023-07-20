@@ -1,9 +1,5 @@
 package Models;
 
-import Models.Ladder;
-import Models.Player;
-import Models.Snake;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -17,19 +13,11 @@ public class Board {
     private List<Player> players;
 
     public Board(int size) {
-        this.setSize();
-        this.snakes = new ArrayList<Snake>();
-        this.ladders = new ArrayList<Ladder>();
-        this.players = new ArrayList<Player>();
-        this.playerPieces = new HashMap<String, Integer>();
-    }
-
-    public void setSize() {
         this.size = size;
-    }
-
-    public int getSize() {
-        return size;
+        this.snakes = new ArrayList<>();
+        this.ladders = new ArrayList<>();
+        this.players = new ArrayList<>();
+        this.playerPieces = new HashMap<>();
     }
 
     public void setSnakes(List<Snake> snakes) {
